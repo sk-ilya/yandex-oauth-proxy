@@ -6,7 +6,7 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const code = urlParams.get('code');
-        if (token) {
+        if (code) {
             const redirectURL = `shortcuts://run-shortcut?name=Alisa_OAuth&input=${code}`;
             window.location.href = redirectURL;
         } else {
