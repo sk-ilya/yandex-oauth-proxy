@@ -10,7 +10,7 @@
             const redirectURL = `shortcuts://run-shortcut?name=Alisa_OAuth&input=${token}`;
             window.location.href = redirectURL;
         } else {
-            document.body.innerHTML = '<p>No token provided.</p>';
+            alert("No token provided")
         }
     </script>
 </head>
