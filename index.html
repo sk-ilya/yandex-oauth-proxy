@@ -5,9 +5,9 @@
     <title>Shortcut Redirect</title>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const token = urlParams.get('token');
+        const code = urlParams.get('code');
         if (token) {
-            const redirectURL = `shortcuts://run-shortcut?name=Alisa_OAuth&input=${token}`;
+            const redirectURL = `shortcuts://run-shortcut?name=Alisa_OAuth&input=${code}`;
             window.location.href = redirectURL;
         } else {
             alert("No token provided")
