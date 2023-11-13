@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shortcut Redirect</title>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+        if (token) {
+            const redirectURL = `shortcuts://run-shortcut?name=Alisa_OAuth&input=${token}`;
+            window.location.href = redirectURL;
+        } else {
+            document.body.innerHTML = '<p>No token provided.</p>';
+        }
+    </script>
+</head>
